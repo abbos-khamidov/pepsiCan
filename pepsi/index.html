@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="canColor">
+        <header>
+            <a href="#"><img src="logo.png" alt="logo" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Pepsi</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's me <br> <span>Pepsi</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, eum dolores facilis ut quia vitae
+                    eius odit, velit quisquam ad nobis sint totam sed. Perferendis quidem asperiores consequuntur
+                    assumenda iure.</p>
+                <a href="#">See All my Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="pepsi001.png" alt="can_of_cola" class="pepsi">
+            </div>
+        </div>
+        <ul class="cards">
+            <li><img src="pepsi002.png" onclick="imgSlider('pepsi002.png') ;changeBgColor('#e9e6e6') " alt="can"></li>
+            <li><img src="pepsi003.png" onclick="imgSlider('pepsi003.png') ;changeBgColor('#25282a') "alt="can"></li>
+            <li><img src="pepsi001.png" onclick="imgSlider('pepsi001.png') ; changeBgColor('#00477a') "alt="can"></li>
+        </ul>
+        <ul class="social">
+            <li><a href=""><img src="twitter.png" alt=""></a></li>
+            <li><a href=""><img src="facebook.png" alt=""></a></li>
+            <li><a href=""><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgColor(color) {
+            const canColor = document.querySelector('.canColor');
+            canColor.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
